@@ -1,0 +1,68 @@
+//the doc caotains a 2 dimensions table.
+//Each cell has an uppercase letter and a bground color
+//Concat each letter into one string
+//skip the letters that arent visible
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td style='color: #ff00ff; background-color: #FFFFFF'>Q</td>
+                <td style='color: #442244; background-color: #442244'>Y</td>
+                <td style='color: #FFFF00; background-color: #442244'>A</td>
+
+            </tr>
+            <tr>
+                <td style='color: #FFEEFE; background-color: #990000'>Q</td>
+                <td style='color: #FFFF00; background-color: #FF0'>M</td>
+                <td style='color: #000000; background-color: #FF7777'>O</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <p id="demo"></p>
+</body>
+<script>
+
+    // function display() {
+    //     let data = document.getElementsByTagName('td');
+    //     console.log(data)
+    //     let text = '';
+    //     var i;
+    //     for (i = 0; i < data.length; i++) {
+    //         text += data.elements[i].value
+    //     }
+    //     document.getElementById('demo').innerHTML = text;
+    // }
+    // display()
+
+    function solution(value) {
+        let data = document.getElementsByTagName('tbody')[0].innerText;
+        let color = getComputedStyle(document.getElementsByTagName('td')[3]).getPropertyValue('background-color')
+
+        let text = []
+        let name = text.replace(/[!@#]/g, "");
+        for (i = 0; i < data.length; i++) {
+
+            // console.log(data[i])
+
+            text.push(data[i])
+            console.log(text)
+
+        }
+
+        // console.log(text)
+        // console.log(color)
+    }
+    solution()
+</script>
+
+</html>
