@@ -1,0 +1,48 @@
+//given a html doc representing a test consisting of multiple choice questions
+//each question has several possible choices and only some are correct
+//each ? is answered correctly if and only if all the correct choices and none of the inccorrect ones are checked
+//your task is to determine the users score, the number of ?s answered correctly
+// call the function should_be_checked(question_ index, choice_index)
+/which determines wether a specific choice should be checked true or false
+//the form is created using form, feildset, legend, and input tags
+//each feildset represent one question and has a id attribute of the form "question-<question_index>"
+    // it also has several children: a non empty legend and one or more imputs
+    //each input represents a single choice for it's parent question.
+    //each input has a type attribute set to the checkbox and an id attribute of the form "choice-<question_index>
+        <choice_index>"
+            //for example the third choice in the second ? has an id attribute set to choice-2-3
+            //you can assume that for every input the question index that appears in its id is the same as that of its
+            parent fieldset
+
+            //write a function solution given access to a dom tree representing an html doc and access to the should be
+            checked function
+            //returns an integer representing the number of correctly answered questions
+
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+
+            <body>
+                <form>
+                    <fieldset id="question-1">
+                        <legend>Easy Question</legend>
+                        <input type="checkbox" id="choice-1-1" checked>Incorrect Answer</input>
+                    </fieldset>
+                    <fieldset id="question-2">
+                        <legend>Another Sample Question</legend>
+                        <input type="checkbox" id="choice-2-1"> Sample Incorrect Answer</input>
+                        <br>
+                        <input type="checkbox" id="choice-2-2" checked="checked"> Sample Correct Answer</input>
+                    </fieldset>
+                </form>
+            </body>
+
+            </html>
+
+            //lets assume should be checked which will only return true for arguments (2,2)
+            // in this instance your function should return 1, since only the second question is answered correctly
