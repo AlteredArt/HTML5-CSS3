@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen" type="text/css">
+    .circle {
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      float:left;
+      margin:50px;
+    }
+    #redcircle {
+      background-color: red;
+    }
+    #bluecircle{
+      background-color: blue;
+    }
+    #greencircle {
+      background-color: green;
+    }
+  </style>
+  <title>circles</title>
+</head>
+<body>
+  <div class="circle" id="redcircle">
+
+  </div>
+  <div class="circle" id="bluecircle">
+
+  </div>
+  <div class="circle" id="greencircle">
+
+  </div>
+  <script type="text/javascript">
+  document.getElementById("redcircle").onclick = function() {
+    document.getElementById("redcircle").style.display = "none"
+  }
+  document.getElementById("bluecircle").onclick = function() {
+    document.getElementById("bluecircle").style.display = "none"
+  }
+  document.getElementById("greencircle").onclick = function() {
+    document.getElementById("greencircle").style.display = "none"
+  }
+  </script>
+</body>
+</html>
