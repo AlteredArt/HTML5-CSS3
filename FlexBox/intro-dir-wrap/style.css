@@ -51,6 +51,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
       /* flex also works with column */
   /* flex-wrap:wrap; */
   /* flex-wrap: wrap-reverse; */
+      /* flex wrap wrap gives true percentages */
+  /* flex-wrap: wrap; */
   
 }
 
@@ -81,10 +83,11 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 
-/* ordering - rearranges the order */
+/* ordering - rearranges the order -adds to the end */
+/* negative adds to the start */
 .box3 {
-  order:1;
+  order:3;
 }
 .box5 {
-  order:2;
+  order:-2;
 }
